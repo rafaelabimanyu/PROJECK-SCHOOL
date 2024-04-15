@@ -1,0 +1,317 @@
+body {
+  background: #f0faff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #000000;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.logo{
+  margin-left: 5%;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+}
+.logo_header{
+  display: flex;
+  margin-left: 2%;
+}
+
+.main_nav{
+  display: flex;
+  width: 50%;
+  float: right;
+  margin-right: 2%;
+  justify-content: space-between;
+  list-style: none;
+}
+.main_nav li:hover{
+  background-color: gray
+}
+
+.main_nav li{
+  display: inline;
+  color: #ffffff;
+}
+.main_nav li a{
+  color: #ffffff;
+}
+
+@media only screen and (max-width : 992px){
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #000000;
+    font-size: 20px;
+  }
+
+  .main_nav{
+    display: none;
+  }
+
+  .show_nav{
+    padding-top: 2%;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .main_nav li{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
+  }
+  .navbar_toggle {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30px;
+    color: #ffffff;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    display: block;
+  }
+  .logo_header{
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 2%;
+  }
+} 
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right; /* Align the navigation items to the right */
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px; /* Adjust the spacing between navigation items */
+  padding: 10px; /* Add padding to create space around the text */
+  background-color: #000000; /* Background color of the box */
+  border-radius: 5px; /* Add rounded corners to the box */
+}
+
+nav ul li:first-child {
+margin-left: 0; /* Remove margin from the first navigation item */
+}
+
+nav ul li a {
+  color: #000; /* Text color of the navigation */
+  text-decoration: none;
+}
+
+nav ul li a::after {
+  content: ''; /* Empty content for the small box */
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 5px; /* Adjust the width of the small box */
+  height: 5px; /* Adjust the height of the small box */
+  background-color: #00a2ff; /* Color of the small box */
+}
+
+section {
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer div {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+figcaption {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Add margin between social media icons and caption */
+}
+
+.social-media-icons a {
+  margin: 0 10px;
+  color: #0091ff;
+  font-size: 24px;
+}
+
+.footer-caption {
+  text-align: center; /* Center-align the caption */
+  font-style: italic; /* Italicize the text */
+  font-size: 14px; /* Adjust the font size */
+}
+
+.carousel {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+ul.slides {
+  display: block;
+  position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.slides input {
+  display: none;
+}
+
+
+.slide-container {
+  display: block;
+}
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all .7s ease-in-out;
+}
+
+.slide-image img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+   display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+opacity: 1;
+}
+
+input:checked + .slide-container .nav label { display: block; }
